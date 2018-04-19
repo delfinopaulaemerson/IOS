@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		C298DD6720892532001DD2D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298DD6620892532001DD2D1 /* AppDelegate.swift */; };
-		C298DD6920892532001DD2D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298DD6820892532001DD2D1 /* ViewController.swift */; };
+		C298DD6920892532001DD2D1 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298DD6820892532001DD2D1 /* MapaViewController.swift */; };
 		C298DD6C20892532001DD2D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C298DD6A20892532001DD2D1 /* Main.storyboard */; };
 		C298DD6E20892533001DD2D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C298DD6D20892533001DD2D1 /* Assets.xcassets */; };
 		C298DD7120892533001DD2D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C298DD6F20892533001DD2D1 /* LaunchScreen.storyboard */; };
+		C298DD7A2089287A001DD2D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C298DD792089287A001DD2D1 /* MapKit.framework */; };
+		C298DD7D208928AC001DD2D1 /* Coordenadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298DD7C208928AC001DD2D1 /* Coordenadas.swift */; };
+		C298DD8020892B77001DD2D1 /* CoordenadasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298DD7F20892B77001DD2D1 /* CoordenadasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C298DD6320892532001DD2D1 /* AppMapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C298DD6620892532001DD2D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C298DD6820892532001DD2D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C298DD6820892532001DD2D1 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		C298DD6B20892532001DD2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C298DD6D20892533001DD2D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C298DD7020892533001DD2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C298DD7220892533001DD2D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C298DD792089287A001DD2D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C298DD7C208928AC001DD2D1 /* Coordenadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordenadas.swift; sourceTree = "<group>"; };
+		C298DD7F20892B77001DD2D1 /* CoordenadasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordenadasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C298DD7A2089287A001DD2D1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +45,11 @@
 		C298DD5A20892531001DD2D1 = {
 			isa = PBXGroup;
 			children = (
+				C298DD7E20892B3A001DD2D1 /* controler */,
+				C298DD7B20892891001DD2D1 /* model */,
 				C298DD6520892532001DD2D1 /* AppMapa */,
 				C298DD6420892532001DD2D1 /* Products */,
+				C298DD782089287A001DD2D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +65,37 @@
 			isa = PBXGroup;
 			children = (
 				C298DD6620892532001DD2D1 /* AppDelegate.swift */,
-				C298DD6820892532001DD2D1 /* ViewController.swift */,
 				C298DD6A20892532001DD2D1 /* Main.storyboard */,
 				C298DD6D20892533001DD2D1 /* Assets.xcassets */,
 				C298DD6F20892533001DD2D1 /* LaunchScreen.storyboard */,
 				C298DD7220892533001DD2D1 /* Info.plist */,
 			);
 			path = AppMapa;
+			sourceTree = "<group>";
+		};
+		C298DD782089287A001DD2D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C298DD792089287A001DD2D1 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C298DD7B20892891001DD2D1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C298DD7C208928AC001DD2D1 /* Coordenadas.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		C298DD7E20892B3A001DD2D1 /* controler */ = {
+			isa = PBXGroup;
+			children = (
+				C298DD6820892532001DD2D1 /* MapaViewController.swift */,
+				C298DD7F20892B77001DD2D1 /* CoordenadasViewController.swift */,
+			);
+			name = controler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C298DD6920892532001DD2D1 /* ViewController.swift in Sources */,
+				C298DD8020892B77001DD2D1 /* CoordenadasViewController.swift in Sources */,
+				C298DD6920892532001DD2D1 /* MapaViewController.swift in Sources */,
 				C298DD6720892532001DD2D1 /* AppDelegate.swift in Sources */,
+				C298DD7D208928AC001DD2D1 /* Coordenadas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
